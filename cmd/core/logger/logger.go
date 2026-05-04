@@ -52,3 +52,15 @@ func NewLogger(config *Config) (*Logger, error) {
 		file:   logFile,
 	}, nil
 }
+
+func NewLoggerMust() *Logger {
+	cfg := NewConfigMust()
+
+	logger, err := NewLogger(cfg)
+
+	if err != nil {
+		panic(err)
+	}
+
+	return logger
+}
