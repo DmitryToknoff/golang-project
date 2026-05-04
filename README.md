@@ -1,2 +1,0 @@
-# golang-project
-postgres, golang
